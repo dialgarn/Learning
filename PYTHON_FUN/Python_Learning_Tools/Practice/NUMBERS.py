@@ -9,15 +9,34 @@
 #print(4 + 2 * 3)        #ORDER OF OPERATIONS - PEMDAS
 #print((4 + 2) *3)
 
+    #Excercises
 
-sleep = (6.2 + 7 + 8 + 5 + 6.5 + 7.1 + 8.5)
-avg_sleep = (sleep / 7)
-print(avg_sleep)
+#1
+#sleep = (6.2 + 7 + 8 + 5 + 6.5 + 7.1 + 8.5)
+#avg_sleep = (sleep / 7)
+#print(avg_sleep)
 
-num = 297 / 3
-if type(num) == int:
-    print('yes')
-else:
-    print('no')
+#2
+#num = 297 / 3
+#if type(num) == int:
+    #print('yes')
+#else:
+    #print('no')
 
-print(2**10)
+#3
+#print(2**10)
+
+#4
+year_list = [1800, 1900, 1903, 2000, 2002]
+
+for i, val in enumerate(year_list):
+    if val / 4 == int:
+        if val / 100 == int:
+            if val / 400 == int:
+                print(val, ',', 'leap year')
+            else:
+                print(val, ',', 'not a leap year')
+        else:
+            print(val, ',', 'leap year')
+    else:
+        print(val, ',', 'not a leap year')
