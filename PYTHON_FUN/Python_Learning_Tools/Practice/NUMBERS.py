@@ -30,9 +30,9 @@
 year_list = [1800, 1900, 1903, 2000, 2002]
 
 for i, val in enumerate(year_list):
-    if val / 4 == int:
-        if val / 100 == int:
-            if val / 400 == int:
+    if val % 4 == 0:
+        if val % 100 == 0:
+            if val % 400 == 0:
                 print(val, ',', 'leap year')
             else:
                 print(val, ',', 'not a leap year')
