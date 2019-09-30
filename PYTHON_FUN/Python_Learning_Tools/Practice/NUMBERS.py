@@ -27,17 +27,16 @@
 #print(2**10)
 
 #4
-year_list = [1800, 1900, 1903, 2000, 2002]
+year_list = [1800, 1900, 1903, 2000, 2002, 2020, 3464]
 
 for i, val in enumerate(year_list):
     if val % 4 == 0:
         if val % 100 == 0:
             if val % 400 == 0:
-                print(val, ',', 'leap year')
+                print(val, 'leap year')
             else:
-                print(val, ',', 'not a leap year')
+                print(val, 'not a leap year')
         else:
-            print(val, ',', 'leap year')
+            print(val, 'leap year')
     else:
-        print(val, ',', 'not a leap year')
-
+        print(val, 'not a leap year')
