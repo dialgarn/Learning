@@ -25,4 +25,14 @@ paragraph = """\"Python is a great language!", said Fred.
 \"I don\'t ever remember having this much fun before!\""""
 print(paragraph)
 
-#3
+#3  omega pi = 03D6
+print('\u03D6')
+print('\N{GREEK CAPITAL LETTER OMEGA}')
+
+
+
+#4
+item = 'car'
+cost = 13499.99
+
+print('{:<10}'.format(item), '{:>10,}'.format(cost))
