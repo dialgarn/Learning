@@ -58,3 +58,29 @@ elif score >= 60:
     grade = 'D'
 else:
     grade = 'F'
+
+# EXERCISES
+
+# 1
+year_list = [1800, 1900, 1903, 2000, 2002, 2020, 3464, 5000, 4912]
+
+for i, val in enumerate(year_list):
+    if val % 4 == 0:
+        if val % 100 == 0:
+            if val % 400 == 0:
+                print(val, 'leap year')
+            else:
+                print(val, 'not a leap year')
+        else:
+            print(val, 'leap year')
+    else:
+        print(val, 'not a leap year')
+
+# 2
+num_list = [1, 2, 3, 4, 112345]
+
+for i, val in enumerate(num_list):
+    if val % 2 == 0:
+        print(val, 'even!')
+    else:
+        print(val, 'odd!')
