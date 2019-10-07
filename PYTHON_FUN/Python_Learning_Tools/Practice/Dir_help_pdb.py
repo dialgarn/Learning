@@ -1,24 +1,22 @@
-#print('matt'.capitalize())
-#print('Hi {}'.format('there'))
-#print('YIKES'.lower())
-#print('hullo'.upper())
+# print('matt'.capitalize())
+# print('Hi {}'.format('there'))
+# print('YIKES'.lower())
+# print('hullo'.upper())
 
-#print(help('some string'.upper))
+# print(help('some string'.upper))
 
+# EXERCISES
 
-    #EXERCISES
-
-#1
-#name = 'Devin'
-#print(dir(name))
-#print(help(''.find))
-#print(help(''.title))
+# 1
+# name = 'Devin'
+# print(dir(name))
+# print(help(''.find))
+# print(help(''.title))
 
 print('hello there my dear old friend'.title())
 
-#2
+# 2
 
 age = 17
 print(dir(age))
 print(help(int.numerator))
-
