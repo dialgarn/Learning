@@ -92,3 +92,26 @@ if not man:
     print('John not found!')
 else:
     print('There is a John!')
+
+# 3
+people = []
+friend1 = ('Josh', 'Aina', 18)
+friend2 = ('Jacob', 'Aina', 16)
+friend3 = ('Grace', 'Evans', 17)
+friend4 = ('Olivia', 'Boyd', 16)
+people.append(friend1)
+people.append(friend2)
+people.append(friend3)
+people.append(friend4)
+age = 0
+
+for friend in people:
+    age += friend[2]
+avg_age = age / len(people)
+print('\n')
+print('The average age is:', avg_age)
+for friend in people:
+    if friend[2] > avg_age:
+        print('{} is ABOVE the average age'.format(friend[0]))
+    elif friend[2] < avg_age:
+        print('{} is BELOW the average age'.format(friend[0]))
