@@ -98,3 +98,5 @@ def is_prime(num):
 
 
 print(is_prime(427))
+
+# 3
