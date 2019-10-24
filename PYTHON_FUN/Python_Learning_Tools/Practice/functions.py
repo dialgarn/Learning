@@ -100,3 +100,34 @@ def is_prime(num):
 print(is_prime(427))
 
 # 3
+
+
+def binary_search(array, l, r, x,):
+
+    # Check base case
+    if r >= l:
+        mid = l + (r - 1) / 2
+
+        # If element is present at the middle itself
+        if array[mid] == x:
+            return mid
+
+        # If element is smaller than mid, then it can only be present in left subarray
+        elif array[mid] > x:
+            return binary_search(array, l, mid - 1, x)
+
+        # Else the element can only be present in right subarray
+        else:
+            return binary_search(array, mid + 1, r, x)
+    else:
+        # Element is not present in the array
+        return -1
+
+
+test_array = [2, 3, 4, 10, 30, 40]
+
+blah = binary_search(test_array, 0, len(test_array), 10)
+if blah != 1:
+    print('Element is present at index %d' & blah)
+else:
+    print('Element is not present in array')
