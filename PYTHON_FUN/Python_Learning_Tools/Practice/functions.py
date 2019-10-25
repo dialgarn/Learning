@@ -101,33 +101,47 @@ print(is_prime(427))
 
 # 3
 
+from bisect import bisect_left
 
-def binary_search(array, l, r, x,):
 
-    # Check base case
-    if r >= l:
-        mid = l + (r - 1) / 2
-
-        # If element is present at the middle itself
-        if array[mid] == x:
-            return mid
-
-        # If element is smaller than mid, then it can only be present in left subarray
-        elif array[mid] > x:
-            return binary_search(array, l, mid - 1, x)
-
-        # Else the element can only be present in right subarray
-        else:
-            return binary_search(array, mid + 1, r, x)
+def binary_search(a, x):
+    i = bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
     else:
-        # Element is not present in the array
         return -1
 
 
-test_array = [2, 3, 4, 10, 30, 40]
-
-blah = binary_search(test_array, 0, len(test_array), 10)
-if blah != 1:
-    print('Element is present at index %d' & blah)
+a = [1, 2, 4, 4, 8]
+x = int(4)
+res = binary_search(a, x)
+if res == -1:
+    print(x, 'is absent')
 else:
-    print('Element is not present in array')
+    print('First occurrence of', x, 'is present at', res)
+
+# 4
+i = None
+
+
+def get_indices(string):
+    for i, c in enumerate(string):
+        if c.isupper():
+            return [i, c]
+
+
+print(get_indices('Hello'))
+
+# def get_indices(s):
+#     return [i for i, c in enumerate(s) if c.isupper()]
+
+
+# get_indices('Hello')
+
+
+def camel_conversion(test_string):
+    return ''.join(['_' + i.lower() if i.isupper()
+                    else i for i in test_string]).lstrip('_')
+
+
+print(camel_conversion('HelloDarknessMyOldFriend'))
