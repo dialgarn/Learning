@@ -1,10 +1,8 @@
-from xml.dom import minidom
-import os
+import pandas as pd
 
-os.getcwd()
-print(os.path.exists('XML Files'))
-os.chdir('XML Files')
-print(os.path.exists('Library.xml'))
+# create universal pathing so it doesnt matter where people install program
+# make it user friendly with nice UI
 
-mydoc = minidom.parse('Library.xml')
-items = mydoc.getElementsByTagName('item')
+data = pd.read_csv('my greatest work of art.txt', sep="   ", header=None, engine='python')
+
+print(data.head())
