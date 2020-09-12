@@ -35,6 +35,7 @@ def frequency_sum(filename):
 
 print(frequency_sum('frequency_list.txt'))
 print(frequency_sum('frequency_list2.txt'))
+# print(frequency_sum('numbers.txt'))
 
 
 # Part B
