@@ -5,4 +5,4 @@ import pandas as pd
 
 data = pd.read_csv('my greatest work of art.txt', sep="   ", header=None, engine='python')
 
-print(data.head())
+print(data)
